@@ -904,6 +904,15 @@ p {
 
     <a href="contact.html" class="nav-btn">Contact</a>
 </nav>
+<script>
+  const toggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  toggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
+
 
 <!-- ================= OUR PROJECTS ================= -->
 <section class="projects-section">
