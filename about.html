@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About Us</title>
+
+<!-- Bootstrap 5 CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+<style>
+
+
+    /* ================= NAVBAR (NEW COLORS) ================= */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: linear-gradient(180deg, #2b2e34, #1c1f24); /* slate grey */
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffb703; /* soft orange */
+}
+
+/* Menu */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #e5e5e5;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ffb703;
+}
+
+/* Contact Button */
+.nav-btn {
+  padding: 8px 20px;
+  border-radius: 20px;
+  background: #ffb703;
+  color: #1c1f24;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.nav-btn:hover {
+  background: #e6a200;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+}
+
+    .about-section {
+        padding: 80px 0;
+        background-color: #f8f9fa;
+    }
+
+    .section-tag {
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 2px;
+        color: #0d6efd;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .about-title {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .about-text {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #555;
+        margin-bottom: 25px;
+    }
+
+    .feature-box {
+        background: #0a0f2c;
+        color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+    }
+
+    .feature-box h5 {
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+
+    .feature-box p {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .feature-list li {
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+
+    .contact-cta {
+        font-size: 18px;
+        font-weight: 600;
+        color: #0d6efd;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .about-btn {
+        margin-top: 25px;
+    }
+
+
+
+     body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Navbar container */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 40px;
+        background-color: #0a0f2c;
+    }
+
+    /* Logo */
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #00d4ff;
+    }
+
+    /* Menu */
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 25px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links li a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 16px;
+        transition: color 0.3s;
+    }
+
+    .nav-links li a:hover {
+        color: #00d4ff;
+    }
+
+    /* Contact Button */
+    .nav-btn {
+        padding: 8px 18px;
+        border-radius: 20px;
+        background-color: #00d4ff;
+        color: #000;
+        font-weight: bold;
+        text-decoration: none;
+        transition: background 0.3s;
+    }
+
+    .nav-btn:hover {
+        background-color: #00b4d8;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 900px) {
+        .nav-links {
+            display: none;
+        }
+    }
+
+
+
+
+
+    /* ================= FOOTER ================= */
+
+.site-footer {
+  background: linear-gradient(180deg, #0d1b2a, #1b263b);
+  color: #e5e7eb;
+  padding: 70px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+/* Logo */
+.footer-logo {
+  color: #00d4ff;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+/* Columns */
+.footer-col h4 {
+  font-size: 16px;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #cbd5e1;
+}
+
+/* Links */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #cbd5e1;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #00d4ff;
+}
+
+/* Social Icons */
+.footer-social {
+  display: flex;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.footer-social a {
+  width: 36px;
+  height: 36px;
+  background: #ffffff;
+  color: #0d1b2a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.footer-social a:hover {
+  transform: translateY(-4px);
+  background: #00d4ff;
+}
+
+/* Contact icons */
+.footer-col.contact i {
+  color: #00d4ff;
+  margin-right: 8px;
+}
+
+/* Bottom */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.15);
+  margin-top: 50px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #cbd5e1;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+}
+
+
+
+
+
+
+
+
+/* ================= FOOTER ================= */
+
+.site-footer {
+  background: linear-gradient(180deg, #0f3d3e, #081f20); /* ✅ NEW background */
+  color: #e5e7eb;
+  padding: 70px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+/* Logo */
+.footer-logo {
+  color: #00ffd5; /* adjusted accent to match */
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+/* Columns */
+.footer-col h4 {
+  font-size: 16px;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #cbd5e1;
+}
+
+/* Links */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #cbd5e1;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #00ffd5; /* updated hover */
+}
+
+/* Social Icons */
+.footer-social {
+  display: flex;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.footer-social a {
+  width: 36px;
+  height: 36px;
+  background: #ffffff;
+  color: #0f3d3e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.footer-social a:hover {
+  transform: translateY(-4px);
+  background: #00ffd5;
+}
+
+/* Contact icons */
+.footer-col.contact i {
+  color: #00ffd5;
+  margin-right: 8px;
+}
+
+/* Bottom */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.15);
+  margin-top: 50px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #cbd5e1;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+}
+
+</style>
+</head>
+
+<body>
+    <nav class="navbar">
+    <div class="logo">CyberSecure</div>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="blog.html">Blog</a></li>
+    </ul>
+
+    <a href="contact.html" class="nav-btn">Contact</a>
+</nav>
+
+<section class="about-section">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- Left Content -->
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <span class="section-tag">About Us</span>
+                <h2 class="about-title">Your Trusted Partner in Cybersecurity & AI Innovation</h2>
+                <p class="about-text">
+                    At <strong>Quantum Innovation</strong>, we deliver comprehensive cybersecurity
+                    solutions and intelligent automation that protect your digital assets while driving
+                    business transformation. Born from the merger of two cybersecurity leaders,
+                    we're uniquely positioned at the intersection of security and AI—ensuring your
+                    innovations are protected and your operations are optimized.
+                </p>
+                <p class="about-text">
+                    Proudly supporting <strong>Vision 2030</strong>, we're building Saudi Arabia's
+                    cybersecurity-ready, AI-enabled workforce for the digital economy.
+                </p>
+
+                <div class="contact-cta">
+                    <i class="bi bi-telephone-fill"></i>
+                    +966 XX XXX XXXX
+                </div>
+
+                <a href="#" class="btn btn-primary about-btn">More About Us</a>
+            </div>
+
+            <!-- Right Feature Box -->
+            <div class="col-lg-6">
+                <div class="feature-box">
+                    <h5>24/7 Threat Detection and Response</h5>
+                    <p>
+                        Round-the-clock cybersecurity monitoring and AI-powered threat intelligence,
+                        safeguarding your business with real-time detection and rapid response
+                        capabilities.
+                    </p>
+
+                    <ul class="feature-list list-unstyled">
+                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Proactive Threat Detection</li>
+                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i>AI-Enhanced Security Operations</li>
+                        <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Expert 24/7 Support Team</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <!-- Brand -->
+    <div class="footer-col brand">
+      <h2 class="footer-logo">CyberSecure</h2>
+      <p>
+        Delivering next-gen cybersecurity and AI-powered automation solutions.
+        Trusted partner for secure digital transformation.
+      </p>
+
+      <div class="footer-social">
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </div>
+
+    <!-- Services -->
+    <div class="footer-col">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="services.html">SOC 24/7 Monitoring</a></li>
+        <li><a href="services.html">GRC & Compliance</a></li>
+        <li><a href="services.html">AI Automation</a></li>
+        <li><a href="services.html">Enterprise Security</a></li>
+        <li><a href="services.html">Penetration Testing</a></li>
+        <li><a href="services.html">CyberSecurity&Training</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-col contact">
+      <h4>Contact Us</h4>
+      <p><i class="fa-solid fa-phone"></i> +966 XX XXX XXXX</p>
+      <p><i class="fa-solid fa-envelope"></i> info@cybersecure.com</p>
+      <p><i class="fa-solid fa-location-dot"></i> Saudi Arabia</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 CyberSecure. All Rights Reserved.</p>
+  </div>
+</footer>
+
+
+</body>
+</html>
