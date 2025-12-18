@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cybersecure</title>
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -12,6 +12,8 @@
 </head>
 <body>
 
+<div class="menu-toggle">
+  <i class="fa-solid fa-bars"></i>
 
     
      <nav class="navbar">
@@ -29,6 +31,7 @@
 
     <a href="contact.html" class="nav-btn">Contact</a>
 </nav>
+</div>
    <style>
 
 /* ================= NAVBAR (NEW COLORS) ================= */
@@ -376,6 +379,66 @@ html, body {
   padding: 80px 20px;
   text-align: center;
 }
+
+
+
+
+
+@media (max-width: 900px) {
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    background: #0a0f2c;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+}
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #0a0f2c;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Experience Badge */
 .experience-badge {
