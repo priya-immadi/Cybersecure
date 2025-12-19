@@ -56,6 +56,115 @@
 
 
       /* ===== FINAL HAMBURGER FIX ===== */
+
+      .menu-toggle {
+  font-size: 24px;
+  color: #ffffff;
+  cursor: pointer;
+}
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: block;
+  }
+}
+/* ================= FINAL NAVBAR FIX ================= */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: linear-gradient(180deg, #2b2e34, #1c1f24);
+  position: relative;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffb703;
+}
+
+/* Menu */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #e5e5e5;
+  font-size: 16px;
+}
+
+.nav-links li a:hover {
+  color: #ffb703;
+}
+
+/* Desktop Contact */
+.nav-btn {
+  padding: 8px 20px;
+  border-radius: 20px;
+  background: #ffb703;
+  color: #1c1f24;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* ===== HAMBURGER ===== */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 28px;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 3px;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: flex;   /* ✅ THIS MAKES THE THREE LINES VISIBLE */
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #1c1f24;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 20px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-btn {
+    display: none;
+  }
+
+  .nav-links li a.mobile-btn {
+    background: #ffb703;
+    color: #1c1f24;
+    padding: 12px 26px;
+    border-radius: 22px;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+  }
+}
+
 .menu-toggle {
  
   flex-direction: column;
