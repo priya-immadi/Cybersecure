@@ -154,12 +154,7 @@ body {
   transform: translateY(-2px);
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .nav-links {
-    display: none;
-  }
-}
+
 
     .about-section {
         padding: 80px 0;
@@ -283,13 +278,7 @@ body {
         background-color: #00b4d8;
     }
 
-    /* Mobile Responsive */
-    @media (max-width: 900px) {
-        .nav-links {
-            display: none;
-        }
-    }
-
+  
 
 
 
@@ -594,6 +583,59 @@ body {
     font-weight: bold;
   }
 }
+
+/* ===== FINAL HAMBURGER (KEEP ONLY THIS) ===== */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 28px;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 3px;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #1c1f24;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 20px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-btn {
+    display: none;
+  }
+
+  .mobile-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 25px;
+    background: #ffb703;
+    color: #1c1f24;
+    border-radius: 20px;
+    font-weight: bold;
+  }
+}
+
 
 </style>
 </head>
