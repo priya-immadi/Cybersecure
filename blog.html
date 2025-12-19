@@ -51,8 +51,6 @@
 
 
 <style>
-   /* ================= NAVBAR (NEW COLORS) ================= */
-/* RESET */
 
 /* ===== NAVBAR FIXED ===== */
 .navbar {
@@ -63,6 +61,7 @@
   background: #1c1f24;
   position: relative;
 }
+
 
 .logo {
   font-size: 24px;
@@ -92,7 +91,7 @@
 }
 
 .menu-toggle {
-  display: none;
+
   font-size: 24px;
   color: #ffffff;
   cursor: pointer;
@@ -188,11 +187,7 @@ body {
 }
 
 /* ===== MOBILE VIEW ===== */
-@media (max-width: 900px) {
 
-  .menu-toggle {
-    display: block;
-  }
 
   .nav-links {
     position: absolute;
@@ -569,6 +564,57 @@ html, body {
 }
 
 
+/* ===== BLOG PAGE FINAL HAMBURGER FIX ===== */
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 28px;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 3px;
+}
+
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: flex;   /* ✅ THIS MAKES THE THREE LINES VISIBLE */
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background: #1c1f24;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 20px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-btn {
+    display: none;
+  }
+
+  .nav-links li a.mobile-btn {
+    background: #ffb703;
+    color: #1c1f24;
+    padding: 12px 26px;
+    border-radius: 22px;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+  }
+}
 
 
 
