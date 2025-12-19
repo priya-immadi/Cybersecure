@@ -888,9 +888,7 @@ html, body {
     text-decoration: none;
   }
 }
-.nav-links li a {
-  color: #ffffff;
-}
+
 .mobile-btn {
   background: #ffb703;
   color: #1c1f24;
@@ -900,6 +898,18 @@ html, body {
   .nav-links li a.mobile-btn {
     background: #ffb703 !important;
     color: #1c1f24 !important;
+  }
+}
+/* FINAL FIX – MOBILE CONTACT BUTTON */
+@media (max-width: 900px) {
+  .nav-links li a.mobile-btn {
+    background-color: #ffb703;
+    color: #1c1f24;
+    display: block;
+    padding: 12px 26px;
+    border-radius: 22px;
+    font-weight: bold;
+    text-decoration: none;
   }
 }
 
