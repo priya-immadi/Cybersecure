@@ -2,26 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pricing & Testimonials</title>
   <link rel="stylesheet" href="pricing-testimonials.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
 </head>
 <body>
-    <nav class="navbar">
-    <div class="logo">CyberSecure</div>
+   <nav class="navbar">
+  <div class="logo">CyberSecure</div>
 
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="team.html">Team</a></li>
-        <li><a href="blog.html">Blog</a></li>
-    </ul>
+  <!-- Hamburger -->
+  <div class="menu-toggle" id="menuToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
-    <a href="contact.html" class="nav-btn">Contact</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="team.html">Team</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html" class="mobile-btn">Contact</a></li>
+  </ul>
+
+  <!-- Desktop Contact -->
+  <a href="contact.html" class="nav-btn">Contact</a>
 </nav>
+
 <script>
   const toggle = document.querySelector(".menu-toggle");
   const navLinks = document.querySelector(".nav-links");
@@ -34,6 +48,59 @@
     <style>
      /* ================= NAVBAR (NEW COLORS) ================= */
 /* RESET */
+/* HAMBURGER ICON */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 28px;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 3px;
+}
+
+/* MOBILE NAV */
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #1c1f24;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 20px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-btn {
+    display: none;
+  }
+
+  /* Mobile Contact Button */
+  .nav-links li a.mobile-btn {
+    background: #ffb703;
+    color: #1c1f24;
+    padding: 12px 26px;
+    border-radius: 22px;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
